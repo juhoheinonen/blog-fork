@@ -262,7 +262,7 @@ namespace DasBlog.Web
 
 		// This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
 		public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IDasBlogSettings dasBlogSettings)
-		{
+		{			
 			(var siteOk, var siteError) = RepairSite(app);
 
 			if (env.IsDevelopment() || env.IsStaging())
@@ -279,6 +279,8 @@ namespace DasBlog.Web
 			{
 				app.UseHsts(options => options.MaxAge(days: 30));
 			}
+
+			app.UseStaticFiles();
 
 			if (!siteOk)
 			{
@@ -307,8 +309,7 @@ namespace DasBlog.Web
 			}
 
 			app.UseForwardedHeaders();
-			
-			app.UseStaticFiles();
+						
 			app.UseCookiePolicy();
 
 			Action<StaticFileResponseContext> cacheControlPrepResponse = (ctx) =>

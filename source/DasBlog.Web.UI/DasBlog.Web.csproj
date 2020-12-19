@@ -93,9 +93,13 @@
     </None>
     <Content Remove="Config\IISUrlRewrite.config" />
     <Content Remove="Config\IISUrlRewrite.Development.config" />
+    <Content Remove="Config\IISUrlRewrite.Production.config" />
     <Content Remove="Config\meta.config" />
     <Content Remove="Config\meta.Development.config" />
+    <Content Remove="Config\meta.Production.config" />
+    <Content Remove="Config\site.Production.config" />
     <None Remove="Config\siteSecurity.Development.config" />
+    <None Remove="Config\siteSecurity.Production.config" />
     <None Include="logs\logs.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

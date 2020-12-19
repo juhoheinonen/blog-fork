@@ -15,7 +15,7 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "ancmHostingModel": "InProcess"
+      "ancmHostingModel": "OutOfProcess"
     },
     "DasBlog.Web.UI": {
       "commandName": "Project",
